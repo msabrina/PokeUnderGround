@@ -1,15 +1,48 @@
-img {
-  height: 100px;
-  width: 100px;
+body {
+   background: url("./img/city.gif")no-repeat center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Cabin Sketch', cursive;
+  color: #fff;
+  opacity: ;
 }
 
+main {
+
+}
+header {
+  font-size: 42px;
+  position: relative;
+  left: 80%;
+  display: inline-block;
+
+}
+img {
+  height: 50px;
+  width: 50px;
+}
+table td {
+  border: 2px solid black;
+  text-align: center;
+}
+table {
+  margin: 10em auto;
+  box-shadow: 0 0 4em #fff;
+  overflow: hidden;
+}
+
+form {
+  font-size: 42px;
+
+}
+/*
 .flex-container {
   display: flex;
-  justify-content: absolute;
-  margin: 0 auto;
-  margin-top: 300px;
-  height: 400px;
-}
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+}*/
 
 .pokemon {
   opacity: 0;
