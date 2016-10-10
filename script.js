@@ -14,19 +14,17 @@ var srcArray = [
         'img/Spearow.png',
         'img/squirtle.png',
         'img/Zubat.png',
-        'img/growlithe',
-        'img/krabby',
-        'img/rattata'
          ];
-// var idArray = ['fishy', 'eevee', 'caterpie'];
+// var idArray = ['fishy', 'eevee', 'caterpie']; if I want to make idArray later
 var pokeBalls = 9;
 var pokeCounter = 0;
 var pokeBallInHand = true;
 
 
-
 $(document).ready(function() {
   randomOnLoad();
+  // if the div you clicked on has src (! empty)
+  // get src img and append it to your container
 
 function randomOnLoad() {
   var allBoxes = $('.pokemon');
@@ -39,17 +37,6 @@ function randomOnLoad() {
       thisBox.attr('src', srcArray[i]);
       console.log(thisBox);
     }
-  }
-
-
-setInterval(pokeStore(), 1000);
-
-function pokeStore() {
-  var pokeOn = $('.pokeStore')
-  if (pokeOn.display == 'visible') {
-      pokeOn.css('hidden');
-  } else {
-  }
 }
 
 // make pokemon show up when box they are in is clicked.
@@ -73,15 +60,12 @@ function pokemonVisibility(event) {
 
 $findPokemon.click(pokemonVisibility);
 
- // if the div you clicked on has src (! empty)
-    // get src img and append it to your container
-
   var $pokeStore = $('.pokeStore');
   console.log($pokeStore);
   $($pokeStore).append(pokeBalls);
 
-  function getPoke(event) {
-    console.log("You got another PokeBall!!")
+function getPoke(event) {
+  console.log("You got another PokeBall!!")
     if (pokeBallInHand) {
       alert('You already got a PokeBall in your hand');
     } else if (pokeBalls > 0) {
@@ -89,28 +73,26 @@ $findPokemon.click(pokemonVisibility);
     } else {
       alert('No PokeBalls left! You lose!!')
     }
-  };
+};
 
 $('.pokeStore').click(getPoke);
 
 $('#reload').click(function() {
     window.location.reload();
-})
-
-
-// var $data = window.location.search.substring(1);
-// var firstArr = $data.split('&');
-// var tempArr = [];
-
-// for (i = 0; i <firstArr.length; i++) {
-//   tempArr = firstArr[i].split('=');
-//       }
-//   tempArr.push(firstArr[i].split('='));
-//    }
-// }
-$.post('index.html')
-
+  });
 });
+
+// $(window).load(function(){
+//     userName();
+// });
+// function userName() {
+//     var queryString = window.location.search;
+//     for (var i=0; i<arr.length; i++) {
+//       var param = arr[i].split("=");
+//     }
+// }
+// });
+
 //create function when mouse clicks on poke ball, cursor turns into pb and picks up 3 balls
 //append pokeBalls to pokeCounter
 //create function that releases a ball from cursor when box is clicked.
