@@ -86,17 +86,6 @@ $('#reload').click(function() {
   });
 });
 
-// $(window).load(function(){
-//     userName();
-// });
-// function userName() {
-//     var queryString = window.location.search;
-//     for (var i=0; i<arr.length; i++) {
-//       var param = arr[i].split("=");
-//     }
-// }
-// });
-
 //create function when mouse clicks on poke ball, cursor turns into pb and picks up 3 balls
 //append pokeBalls to pokeCounter
 //create function that releases a ball from cursor when box is clicked.
