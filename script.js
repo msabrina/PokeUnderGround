@@ -25,7 +25,11 @@ $(document).ready(function() {
   randomOnLoad();
   // if the div you clicked on has src (! empty)
   // get src img and append it to your container
-
+function showCharacter() {
+  var character = window.location.search.substr(10);
+  alert('You chose: ' + character);
+}
+// showCharacter();
 function randomOnLoad() {
   var allBoxes = $('.pokemon');
     for (var i = 0; i < srcArray.length; i++) {
@@ -78,7 +82,7 @@ function getPoke(event) {
 $('.pokeStore').click(getPoke);
 
 $('#reload').click(function() {
-    window.location.reload();
+    location.reload();
   });
 });
 
